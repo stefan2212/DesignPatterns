@@ -13,6 +13,12 @@ public class Main {
         bread.addToCart(bag);
 
         System.out.println(bag.getTotalPrice());
-        bag.buy(wallet);
+        try {
+            bag.buy(wallet);
+        } catch (NotEnoughMoneyException e) {
+            System.out.println("I will go to work");
+        } catch (Exception e) {
+            System.out.println("I will do drugs");
+        }
     }
 }
