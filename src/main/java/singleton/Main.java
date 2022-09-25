@@ -13,5 +13,16 @@ public class Main {
         System.out.println(class1 == class2);
         System.out.println(class2.getA());
         System.out.println(class1.getA());
+
+        //I want to use the databse
+        ConfigurationClass config = ConfigurationClass.getInstance();
+        config.setUsername("Stefan");
+        config.setDatabaseUrl("https://mydatabase:443");
+
+        config.getDataBaseUrl();
+        config.getDataBaseUsername();
+
+        DatabaseCaller caller = new DatabaseCaller();
+        caller.doSomething();
     }
 }
